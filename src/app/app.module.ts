@@ -3,16 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { ScanComponent } from './scan.component';
+import { PrescanComponent } from './prescan.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ScanComponent, PrescanComponent],
+  imports: [BrowserModule, AppRoutingModule, ZXingScannerModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

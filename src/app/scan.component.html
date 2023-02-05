@@ -1,0 +1,10 @@
+<zxing-scanner (camerasFound)="camerasFound($event)"></zxing-scanner>
+
+<section class="results">
+  <small>Result</small>
+  <strong>{{ qrResultString }}</strong>
+</section>
+
+<ng-container *ngFor="let device of availableDevices">
+  <dt>{{ device }}</dt>
+</ng-container>
